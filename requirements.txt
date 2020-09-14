@@ -1,0 +1,4 @@
+watchdog
+parse-torrent-title
+requests
+pysrt
