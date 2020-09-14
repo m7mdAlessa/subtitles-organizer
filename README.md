@@ -6,6 +6,18 @@ It works by monitoring a directory for any changes, when a subtitle file is move
 # Installation through docker
 You can find the docker image [here](https://hub.docker.com/r/m7mdalessa/subtitles-organizer)
 
+### docker
+```
+docker create \
+  --name=subtitles-organizer \
+  -v /path/to/config:/config \
+  -v /path/to/monitored_directory:/subtitles \
+  -v /path/to/movies:/movies \
+  -v /path/to/tvshows:/tv \          # you should add any directories used by Sonarr or Radarr
+  --restart unless-stopped \
+  m7mdalessa/subtitles-organizer
+```
+
 ### docker-compose
 ```
 ---
